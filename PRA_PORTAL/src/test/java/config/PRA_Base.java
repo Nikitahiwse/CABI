@@ -20,14 +20,14 @@ public class PRA_Base
 	     prop=new Properties();
 	     
 	     try {
-		InputStream input=new FileInputStream("E:\\CABI_NEW\\PRA_PORTAL\\src\\test\\java\\config\\config.properties");
+		InputStream input=new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\config\\config.properties");
 		prop.load(input);
 		
-		InputStream input2=new FileInputStream("E:\\CABI_NEW\\PRA_PORTAL\\src\\test\\java\\config\\mycabi.properties");
+		InputStream input2=new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\config\\mycabi.properties");
 		prop.load(input2);
 		
-		InputStream input3=new FileInputStream("E:\\CABI_NEW\\PRA_PORTAL\\src\\test\\java\\config\\ByPathway_Generation.properties");
-		prop.load(input3);
+		InputStream input4=new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\config\\ByPathway_Generation.properties");
+		prop.load(input4);
 		
 		
 	  
@@ -53,7 +53,7 @@ public class PRA_Base
         //for browser opening 
 	   public void initialzation(String URL) throws InterruptedException
 	   {
-		System.setProperty("webdriver.chrome.driver", "E:\\CABI_NEW\\PRA_PORTAL\\Driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
 		wd=new ChromeDriver();
 		wd.get(URL);
 		Thread.sleep(8000);
