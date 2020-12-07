@@ -20,10 +20,10 @@ public class PRA_Base
 	     prop=new Properties();
 	     
 	     try {
-		InputStream input=new FileInputStream("E:\\CABI\\PRA_PORTAL\\src\\test\\java\\config\\config.properties");
+		InputStream input=new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\config\\config.properties");
 		prop.load(input);
 		
-		InputStream input2=new FileInputStream("E:\\CABI\\PRA_PORTAL\\src\\test\\java\\config\\mycabi.properties");
+		InputStream input2=new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\config\\mycabi.properties");
 		prop.load(input2);
 	  
 	     } catch (FileNotFoundException e) {
@@ -48,7 +48,7 @@ public class PRA_Base
         //for browser opening 
 	   public void initialzation(String URL) throws InterruptedException
 	   {
-		System.setProperty("webdriver.chrome.driver", "E:\\CABI\\PRA_PORTAL\\Driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
 		wd=new ChromeDriver();
 		wd.get(URL);
 		Thread.sleep(8000);
