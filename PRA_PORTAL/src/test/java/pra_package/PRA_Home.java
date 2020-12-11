@@ -115,7 +115,7 @@ public class PRA_Home extends PRA_Base{
 		ByPest_categorization bypestcat=PageFactory.initElements(wd, ByPest_categorization.class);
 		bypestcat.categorization(getobject("suggested_title_for_pra"));
 	}
-	@Test(priority = 5)
+	//@Test(priority = 5)
 	void  By_pest_delete_PRA() throws InterruptedException
 	{
 		Delete_bypest_pra deletePRA=PageFactory.initElements(wd, Delete_bypest_pra.class);
