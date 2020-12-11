@@ -128,7 +128,7 @@ public class PRA_Home extends PRA_Base{
 	
 		
 	}
-	@Test(priority = 6)
+	//@Test(priority = 6)
 	void  By_pest_delete_PRA() throws InterruptedException, IOException
 	{
 		Delete_bypest_pra deletePRA=PageFactory.initElements(wd, Delete_bypest_pra.class);
