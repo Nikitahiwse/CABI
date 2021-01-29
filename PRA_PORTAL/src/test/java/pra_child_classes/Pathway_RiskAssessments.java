@@ -10,7 +10,7 @@ import pra_package.PRA_Home;
 
 public class Pathway_RiskAssessments extends PRA_Home{
 	
-	@FindBy(xpath = "//*[@id='PestListGridIncluded']/table/tbody/tr[2]/td[1]/a")    //Peach twig borer               
+	@FindBy(xpath = "//*[@id=\"PestListGridIncluded\"]/table/tbody/tr[1]/td[1]/a")    //Peach twig borer               
 	WebElement select_assessment;
 	
 	
@@ -38,7 +38,7 @@ public class Pathway_RiskAssessments extends PRA_Home{
 	
 	//Assessment with YES Option (Aspergillus fumigatus)
 	
-	@FindBy(xpath = "//*[@id='PestListGridIncluded']/table/tbody/tr[6]/td[1]/a")
+	@FindBy(xpath = "//*[@id=\"PestListGridIncluded\"]/table/tbody/tr[4]/td[1]/a")
 	WebElement select_black_borer;
 	
 	@FindBy(xpath="//input[@class='btn btn-pra-red btn-submit-form margin-top-20' and @value='Rapid assessment']")
@@ -67,7 +67,7 @@ public class Pathway_RiskAssessments extends PRA_Home{
 	//Full risk Assessment (Apte monachus(Black Borer))
 	
 	
-	@FindBy(xpath = "//*[@id=\"PestListGridIncluded\"]/table/tbody/tr[4]/td[1]/a")
+	@FindBy(xpath = "//*[@id=\"PestListGridIncluded\"]/table/tbody/tr[3]/td[1]/a")  //Aspergillus fumigatus
 	WebElement Apate_monachus_assessment;
 	
 	@FindBy(xpath="//input[@class='btn btn-pra-red btn-submit-form margin-top-20' and @value='Full assessment']")
@@ -109,13 +109,13 @@ public class Pathway_RiskAssessments extends PRA_Home{
 	@FindBy(xpath="//*[@id=\"form1\"]/div[9]/div[2]/div/div/div/div[2]/div/input[2]")
 	WebElement next2;
 	
-	@FindBy(xpath="//*[@id=\"RiskAssessmentSections_2__RiskAssessmentQuestions_2__SelectedRating\"]")
+	@FindBy(xpath="//*[@id=\"RiskAssessmentSections_2__RiskAssessmentQuestions_0__SelectedRating\"]")
 	WebElement probability_rate_spread;
 	
 	@FindBy(xpath="//*[@id=\"RiskAssessmentSections_2__RiskAssessmentQuestions_2__SelectedRating\"]")
 	WebElement select_rate_spread_1;
 	
-	@FindBy(xpath="//*[@id=\"RiskAssessmentSections_2__RiskAssessmentQuestions_2__SelectedConfidenceLevel\"]")
+	@FindBy(xpath="//*[@id=\"RiskAssessmentSections_2__RiskAssessmentQuestions_0__SelectedConfidenceLevel\"]")
 	WebElement probability_spread;
 	
 	@FindBy(xpath="//*[@id=\"RiskAssessmentSections_2__RiskAssessmentQuestions_2__SelectedConfidenceLevel\"]")
@@ -329,6 +329,7 @@ public class Pathway_RiskAssessments extends PRA_Home{
 		Thread.sleep(2000);
 		importcpc1.click();
 		
+			
 		Thread.sleep(3000);
 		importcpc2.click();
 		
