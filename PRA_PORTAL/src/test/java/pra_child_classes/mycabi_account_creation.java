@@ -36,7 +36,7 @@ public class mycabi_account_creation extends My_cabi_account{
 		/*
 		 * if(name.equals("Manage Access")) { login_via_username_password.click(); }
 		 */
-	    Thread.sleep(2000);
+	    Thread.sleep(4000);
 		username.sendKeys(cpc_username);
 		Thread.sleep(1000);
 		logger1.log(Status.PASS, "CPC username got entered successfully");

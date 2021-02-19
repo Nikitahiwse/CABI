@@ -34,6 +34,7 @@ public class Risk_assessment extends PRA_Home{
 	public void by_pest_risk_assessment(String tab_under_risk_assessment) throws InterruptedException
 	{
 		
+		Thread.sleep(2000);
 		logger20.log(Status.PASS, "------------------"+tab_under_risk_assessment+" tab Test--------------------------");
 		String sub_header_text=sub_header.getText();
 		logger20.log(Status.PASS, sub_header_text+" tab is opened");
@@ -145,7 +146,7 @@ public class Risk_assessment extends PRA_Home{
 		for(WebElement cpc_button : import_cpc_button)
 		{
 			cpc_button.click();
-			Thread.sleep(4000);
+			Thread.sleep(6000);
 			if(p==1)
 			{
 			wd.switchTo().frame(0);
@@ -207,7 +208,7 @@ public class Risk_assessment extends PRA_Home{
 		Thread.sleep(1000);
 		wd.switchTo().defaultContent();
 		save.click();
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		next_btn.click();
 		Thread.sleep(2000);
 		

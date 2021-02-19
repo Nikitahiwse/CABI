@@ -57,6 +57,8 @@ public class Bypest_Probability_of_entry extends PRA_Home{
 		Thread.sleep(2000);
 		Next_button.click();
 		logger19.log(Status.PASS, "Next button got clicked to switch from categorization to Risk assessment tab");
+		Thread.sleep(2000);
+		
     }
     
     
@@ -171,32 +173,26 @@ public class Bypest_Probability_of_entry extends PRA_Home{
 			logger19.log(Status.PASS, radio2q+" - No got selected");
 			Thread.sleep(3000);	
 		}
-		reference_icon.click();
-		Thread.sleep(2000);
-		jse.executeScript("window.scrollBy(0,300)", "");
-		wd.switchTo().frame(7);
-		
-		List<WebElement> ref=wd.findElements(By.xpath("//body[@id='tinymce']//p[text()='Text entered -First reference']"));
-		int i=1;
-		for(WebElement r : ref)
-		{
-			Thread.sleep(1000);
-			String r_text=r.getText();
-			
-			if(i==1)
-			{
-			
-				if(r_text.equalsIgnoreCase("Text entered -First reference"))
-				{
-					logger19.log(Status.PASS, "Reference is present - "+ r_text);
-				}
-				
-			}
-			i++;
-			
-		}
-		
-		wd.switchTo().defaultContent();
+		/*
+		 * reference_icon.click(); Thread.sleep(2000);
+		 * jse.executeScript("window.scrollBy(0,300)", ""); wd.switchTo().frame(7);
+		 * 
+		 * List<WebElement> ref=wd.findElements(By.
+		 * xpath("//body[@id='tinymce']//p[text()='Text entered -First reference']"));
+		 * int i=1; for(WebElement r : ref) { Thread.sleep(1000); String
+		 * r_text=r.getText();
+		 * 
+		 * if(i==1) {
+		 * 
+		 * if(r_text.equalsIgnoreCase("Text entered -First reference")) {
+		 * logger19.log(Status.PASS, "Reference is present - "+ r_text); }
+		 * 
+		 * } i++;
+		 * 
+		 * }
+		 * 
+		 * wd.switchTo().defaultContent();
+		 */
 		Thread.sleep(3000);
 		save_btn.click();
 		Thread.sleep(8000);

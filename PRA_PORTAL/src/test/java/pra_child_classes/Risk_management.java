@@ -23,17 +23,16 @@ public class Risk_management extends PRA_Home{
 	@FindBy(xpath="//input[@class='btn btn-pra-red' and @value='Next']")WebElement next_btn;
 	@FindBy(xpath="//h1[@class='tab-header']")WebElement tab_header;
 	@FindBy(xpath="//td[@class='bold' and text()='Inspection or testing in post-entry quarantine']")WebElement verify_summary_tab;
-	@FindBy(linkText = "3. Risk management")WebElement rist_assessment;
+	@FindBy(linkText = "3. Risk management")WebElement rist_management;
 
 	public void risk_management_form() throws InterruptedException
 	{
 		
-		//risk_manag_tab.click();
-		//Thread.sleep(3000);
+		
 		
 		logger21.log(Status.PASS,tab_header.getText()+" is opened ");
 		jse.executeScript("window.scrollBy(0,600)", "");
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		
 		List<WebElement>checkbox=wd.findElements(By.xpath("//label[@class='checkbox']//span"));
 		int i=1;
@@ -50,7 +49,7 @@ public class Risk_management extends PRA_Home{
 		
 		Thread.sleep(1000);
 		wd.switchTo().frame(1);
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		text1.sendKeys("xyz");
 		Thread.sleep(1000);
 		logger21.log(Status.PASS, "xyz text got entered in Inspection or testing in post-entry quarantine textbox");
@@ -83,7 +82,7 @@ public class Risk_management extends PRA_Home{
         logger21.log(Status.PASS, "In PRA summary tab->"+summary_txt+" text is visible in risk management summary notes");
         wd.switchTo().defaultContent();
         Thread.sleep(2000);
-        rist_assessment.click();
+        rist_management.click();
         Thread.sleep(3000);
         
 	}

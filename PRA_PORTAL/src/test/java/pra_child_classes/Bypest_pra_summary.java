@@ -89,7 +89,7 @@ public class Bypest_pra_summary extends PRA_Home{
 			logger22.log(Status.PASS, "------Contact Details ------");
 		}
 		note.click();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		logger22.log(Status.PASS,"Edit button got clicked textbox is opened");
 		cancel_btn.click();
 		Thread.sleep(2000);
